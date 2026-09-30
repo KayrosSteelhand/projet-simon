@@ -8,3 +8,13 @@ possibles -->
 
 # Projet Simon - Projet embarqué
 
+| Composant         | Pin   | Utilité                                                                                       |
+| ----------------- | ----- | --------------------------------------------------------------------------------------------- |
+| boutons poussoirs | A2-A5 | déclancher des événements programmé sur la carte comme activer les leds ou démmarer la partie |
+| LEDs              | 2-5   | afficher la couleurs dans la séquence                                                         |
+| Résistances       | GND   | réduire la tension des LEDs pour les préserver                                                |
+| Buzzer            | 7     | Produire un bruit en même temps qu'une LEDs s'allume                                          |
+
+![schema éléctronique](./schema%20electronique.png)
+
+
