@@ -1,7 +1,7 @@
 /*
 Author : Théo Läderach
-Date : 30.09.2026
-Description : simon's game
+Date : 01.10.2026
+Description : jeu du simon
 */
 
 int BLUE_LED_PIN = 2;
@@ -22,12 +22,12 @@ int GREEN = 4;
 
 int OFF = 0;
 int DURATION = 200;
-int BLUE_SOUND = 164;
-int YELLOW_SOUND = 130;
-int RED_SOUND = 110;
-int GREEN_SOUND = 82;
+int BLUE_SOUND = 329;
+int YELLOW_SOUND = 261;
+int RED_SOUND = 220;
+int GREEN_SOUND = 164;
 int VICTORY_SOUND = 1000;
-int ERROR = 32;
+int ERROR = 65;
 
 int sequence[30];
 int sequence_index = 0;
@@ -50,7 +50,7 @@ void setup() {
   Yellow_btn.attach(YELLOW_BTN_PIN, INPUT_PULLUP);
   Red_btn.attach(RED_BTN_PIN, INPUT_PULLUP);
   Green_btn.attach(GREEN_BTN_PIN, INPUT_PULLUP);
-    
+
   pinMode(BLUE_LED_PIN,OUTPUT);
   pinMode(YELLOW_LED_PIN,OUTPUT);
   pinMode(GREEN_LED_PIN,OUTPUT);
@@ -78,7 +78,7 @@ void loop() {
     delay(100);
   }
   victory();
-  
+
   delay(1000);
   //initialisation de la partie
   sequence_index = 0;
@@ -89,7 +89,7 @@ void loop() {
 
   // Boucle principale du jeu
   while (!failed){
-    
+
     // actucalisation de l'état des boutons
     Blue_btn.update();
     Yellow_btn.update();
@@ -115,7 +115,7 @@ void loop() {
       current_color = GREEN;
       led(GREEN);
     }
-    
+
     nextColor = random(1,5);
 
     if (current_color != 0){
@@ -182,7 +182,7 @@ void led(int color){
 
 void error(){
   /*
-  Allume toutes les LED et emet le son d'erreur 
+  Allume toutes les LED et emet le son d'erreur
   */
   for (int ledPin = 2; ledPin < 6; ledPin++){
     digitalWrite(ledPin,HIGH);
