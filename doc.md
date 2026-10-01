@@ -6,7 +6,9 @@
     o Une conclusion concernant les objectifs atteints et non atteint et les améiorations
 possibles -->
 
-# Projet Simon - Projet embarqué
+# Documentation
+
+## Explication du schéma électrique
 
 | Composant         | Pin   | Utilité                                                                                       |
 | ----------------- | ----- | --------------------------------------------------------------------------------------------- |
@@ -18,3 +20,4 @@ possibles -->
 ![schema éléctronique](./schema%20electronique.png)
 
 
+## 
